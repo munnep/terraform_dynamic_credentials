@@ -27,7 +27,7 @@ export AWS_SECRET_ACCESS_KEY=
 export AWS_SESSION_TOKEN=
 ```
 - change the values in `variables.tf` if you are using Terraform Enterprise instead of Terraform Cloud
-- create a file acalled `terraform.tfvars` with the following 
+- create a file called `terraform.tfvars` with the following 
 ```
 tfc_organization_name = "patrickmunne"
 tfc_workspace_name    = "test-dynamic-credentials"
@@ -52,7 +52,7 @@ openid_claims = {
 role_arn = "arn:aws:iam::487939283316:role/patrick-tfc-role"
 ```
 - You now have a trust relation between terraform cloud and organization you defined
-- Makes notes of the output as you will need it a later point
+- Makes notes of the output as you will need it at a later point
 
 
 ## Create workspace in Terraform Cloud
@@ -75,7 +75,7 @@ role_arn = "arn:aws:iam::487939283316:role/patrick-tfc-role"
 cd ../infra
 ```
 - Change the variables in `terraform.tf` to match your workspace you created
-- We will do a run and see it is uses the dynamic credentials to authenticate to
+- We will do a run and see it uses the dynamic credentials to authenticate to AWS
 - Do a terraform init
 ```
 terraform init
